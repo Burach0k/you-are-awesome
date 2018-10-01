@@ -1,7 +1,7 @@
 // DO WHATEVER YOU WANT HERE
 
 const createEnumerableProperty = () => {
-
+return;
 };
 const createNotEnumerableProperty = () => {
 return Symbol("fo");
@@ -53,13 +53,29 @@ const createIncrementer = () => {
 };
 
 // return same argument not earlier than in one second, and not later, than in two
-const returnBackInSecond = () => {};
-const getDeepPropertiesCount = () => {};
-const createSerializedObject = () => {};
+const returnBackInSecond = (param) => {
+    // setTimeout(() => {
+    // }, 1200);
+    // return param;
+};
+const getDeepPropertiesCount = (obj) => {
+    var i;
+    if(i==undefined)i=0;
+    function getproperty(obj){
+        for(var k in obj){
+            getproperty(obj[k]);
+            i+=1;
+        }
+    }
+    getproperty(obj);
+    return i;
+};
+const createSerializedObject = () => {
+    return null;
+};
 const toBuffer = () => {};
-const sortByProto = () => {
-    
-    console.log(a);
+const sortByProto = (arr) => {
+   return arr;
 };
 
 exports.createEnumerableProperty = createEnumerableProperty;
